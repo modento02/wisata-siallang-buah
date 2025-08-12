@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keindahan Desa Siallang Buah</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Menggunakan font Inter sebagai default */
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Animasi untuk elemen yang muncul saat di-scroll */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Kelas untuk menerapkan animasi */
+        .animate-on-scroll {
+            opacity: 0;
+        }
+
+        .animated {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        /* Memberi overlay gelap pada gambar hero agar teks mudah dibaca */
+        .hero-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(10, 37, 64, 0.6);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Navbar -->
+    <header id="header" class="bg-white/80 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo / Judul Website -->
+                <div class="flex-shrink-0">
+                    <a href="#home" class="flex items-center space-x-3">
+                        <span class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg">SB</span>
+                        <span class="font-bold text-gray-800 text-lg hidden sm:block">Desa Siallang Buah</span>
+                    </a>
+                </div>
+
+                <!-- Navigasi Menu (Desktop) -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300">Home</a>
+                    <a href="#kerajinan" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300">Kerajinan</a>
+                    <a href="#wisata" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300">Wisata</a>
+                    <a href="#tentang" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300">Tentang</a>
+                    <a href="#lokasi" class="text-gray-600 hover:text-blue-600 font-medium transition duration-300">Lokasi</a>
+                </nav>
+
+                <!-- Tombol Menu (Mobile) -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                        <span class="sr-only">Buka menu utama</span>
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menu Mobile (disembunyikan secara default) -->
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="text-gray-600 hover:bg-gray-100 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#kerajinan" class="text-gray-600 hover:bg-gray-100 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Kerajinan</a>
+                <a href="#wisata" class="text-gray-600 hover:bg-gray-100 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Wisata</a>
+                <a href="#tentang" class="text-gray-600 hover:bg-gray-100 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Tentang</a>
+                <a href="#lokasi" class="text-gray-600 hover:bg-gray-100 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Lokasi</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 1: Home / Hero -->
+        <section id="home" class="relative min-h-screen flex items-center justify-center bg-cover bg-center hero-overlay" style="background-image: url('https://beautyofindonesia.com/asset-user/uploads/foto_wisata/PANTAI-SIALANG-BUAH-KABUPATEN-SERDANG-BEDAGAI.jpg');">
+            <div class="relative z-10 text-center text-white p-4">
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight mb-4 animate-on-scroll">
+                    Keindahan Desa Siallang Buah
+                </h1>
+                <p class="text-xl sm:text-2xl md:text-3xl font-light mb-8 animate-on-scroll" style="animation-delay: 0.2s;">
+                    Menemukan Pesona Tersembunyi di Pesisir Sumatera Utara
+                </p>
+                <a href="#kerajinan" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 transform hover:scale-105 inline-block animate-on-scroll" style="animation-delay: 0.4s;">
+                    Lihat Hasil Karya
+                </a>
+            </div>
+        </section>
+
+        <!-- Section 2: Kerajinan Lokal -->
+        <section id="kerajinan" class="py-20 sm:py-28 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 animate-on-scroll">Kerajinan Tangan Khas Pesisir</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600 animate-on-scroll" style="animation-delay: 0.2s;">
+                        Karya seni unik yang terinspirasi dari kekayaan laut, dibuat langsung oleh masyarakat Desa Siallang Buah.
+                    </p>
+                </div>
+                
+                <div class="mt-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                    <!-- Contoh Produk 1 -->
+                    <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col animate-on-scroll">
+                        <img class="w-full h-56 object-cover" src="https://placehold.co/400x300/EBF4FF/3B82F6?text=Kerajinan+Kerang" alt="Kerajinan dari Kerang">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-gray-900">Hiasan Dinding Kerang</h3>
+                            <p class="mt-2 text-gray-600 flex-grow">Dekorasi cantik yang terbuat dari berbagai jenis kerang pilihan dari pantai Siallang Buah.</p>
+                            <a href="#" class="mt-4 bg-black text-white py-2 px-4 rounded-lg flex items-center justify-center space-x-2 hover:bg-gray-800 transition-colors">
+                                <img src="https://static.vecteezy.com/system/resources/previews/018/930/573/non_2x/tiktok-logo-tikok-icon-transparent-tikok-app-logo-free-png.png" alt="Logo TikTok" class="w-6 h-6">
+                                <span>Lihat di TikTok</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contoh Produk 2 -->
+                    <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col animate-on-scroll" style="animation-delay: 0.1s;">
+                        <img class="w-full h-56 object-cover" src="https://placehold.co/400x300/EBF4FF/3B82F6?text=Miniatur+Kapal" alt="Miniatur Kapal Nelayan">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-gray-900">Miniatur Kapal Nelayan</h3>
+                            <p class="mt-2 text-gray-600 flex-grow">Replika detail kapal nelayan tradisional, dibuat dari kayu pilihan dan bahan daur ulang.</p>
+                             <a href="#" class="mt-4 bg-black text-white py-2 px-4 rounded-lg flex items-center justify-center space-x-2 hover:bg-gray-800 transition-colors">
+                                <img src="https://static.vecteezy.com/system/resources/previews/018/930/573/non_2x/tiktok-logo-tikok-icon-transparent-tikok-app-logo-free-png.png" alt="Logo TikTok" class="w-6 h-6">
+                                <span>Lihat di TikTok</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contoh Produk 3 -->
+                     <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col animate-on-scroll" style="animation-delay: 0.2s;">
+                        <img class="w-full h-56 object-cover" src="https://placehold.co/400x300/EBF4FF/3B82F6?text=Gantungan+Kunci" alt="Gantungan Kunci Ikan">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-gray-900">Gantungan Kunci Ikan</h3>
+                            <p class="mt-2 text-gray-600 flex-grow">Souvenir unik berbentuk ikan yang lucu, cocok sebagai oleh-oleh khas Siallang Buah.</p>
+                             <a href="#" class="mt-4 bg-black text-white py-2 px-4 rounded-lg flex items-center justify-center space-x-2 hover:bg-gray-800 transition-colors">
+                                <img src="https://static.vecteezy.com/system/resources/previews/018/930/573/non_2x/tiktok-logo-tikok-icon-transparent-tikok-app-logo-free-png.png" alt="Logo TikTok" class="w-6 h-6">
+                                <span>Lihat di TikTok</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contoh Produk 4 -->
+                    <div class="bg-gray-50 rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col animate-on-scroll" style="animation-delay: 0.3s;">
+                        <img class="w-full h-56 object-cover" src="https://placehold.co/400x300/EBF4FF/3B82F6?text=Bingkai+Foto" alt="Bingkai Foto Pasir Pantai">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold text-gray-900">Bingkai Foto Pasir</h3>
+                            <p class="mt-2 text-gray-600 flex-grow">Abadikan momen berharga Anda dengan bingkai foto yang dihiasi pasir pantai asli dan kerang kecil.</p>
+                            <a href="#" class="mt-4 bg-black text-white py-2 px-4 rounded-lg flex items-center justify-center space-x-2 hover:bg-gray-800 transition-colors">
+                                <img src="https://static.vecteezy.com/system/resources/previews/018/930/573/non_2x/tiktok-logo-tikok-icon-transparent-tikok-app-logo-free-png.png" alt="Logo TikTok" class="w-6 h-6">
+                                <span>Lihat di TikTok</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Wisata Desa -->
+        <section id="wisata" class="py-20 sm:py-28 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
+                    <div class="animate-on-scroll">
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900">Jelajahi Pesona Wisata Desa</h2>
+                        <p class="mt-4 text-lg text-gray-600">
+                            Nikmati keindahan pantai berpasir putih, saksikan kehidupan nelayan yang otentik, dan rasakan keramahan warga lokal. Desa Siallang Buah menawarkan pengalaman wisata yang menenangkan dan tak terlupakan.
+                        </p>
+                        <ul class="mt-6 space-y-4">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <svg class="h-6 w-6 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                </div>
+                                <p class="ml-3 text-gray-600">Pemandangan matahari terbenam yang memukau.</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <svg class="h-6 w-6 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                </div>
+                                <p class="ml-3 text-gray-600">Spot memancing yang ideal bagi para penggemar.</p>
+                            </li>
+                             <li class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <svg class="h-6 w-6 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                </div>
+                                <p class="ml-3 text-gray-600">Kuliner hidangan laut segar langsung dari nelayan.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-10 lg:mt-0 animate-on-scroll" style="animation-delay: 0.2s;">
+                        <img class="rounded-xl shadow-2xl w-full h-full object-cover" src="https://placehold.co/600x450/3B82F6/FFFFFF?text=Wisata+Pantai" alt="Wisata Pantai Siallang Buah">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Section 4: Tentang Proyek -->
+        <section id="tentang" class="py-20 sm:py-28 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 animate-on-scroll">Tentang Proyek Ini</h2>
+                </div>
+                <div class="mt-12 max-w-3xl mx-auto text-center animate-on-scroll" style="animation-delay: 0.2s;">
+                    <div class="flex justify-center items-center space-x-8 mb-8">
+                        <img src="https://placehold.co/150x150/EBF4FF/3B82F6?text=Logo+KKN" alt="Logo KKN Siallang Buah" class="h-24 w-24 object-contain">
+                        <img src="https://placehold.co/150x150/EBF4FF/3B82F6?text=Logo+UNIMED" alt="Logo Universitas Negeri Medan" class="h-24 w-24 object-contain">
+                    </div>
+                    <p class="text-lg text-gray-600">
+                        Website ini merupakan hasil karya dan bagian dari program kerja Mahasiswa dan Mahasiswi <strong>Universitas Negeri Medan</strong> yang melaksanakan Kuliah Kerja Nyata (KKN) di Desa Siallang Buah.
+                    </p>
+                    <p class="mt-4 text-lg text-gray-600">
+                        Tujuan kami adalah untuk membantu mempromosikan potensi wisata dan produk kerajinan lokal agar dapat dikenal lebih luas, serta memberikan platform digital bagi para pengrajin untuk memasarkan hasil karyanya.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Lokasi / Peta -->
+        <section id="lokasi" class="py-20 sm:py-28 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                 <div class="text-center">
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 animate-on-scroll">Kunjungi Kami</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600 animate-on-scroll" style="animation-delay: 0.2s;">
+                        Temukan lokasi kami dengan mudah melalui peta di bawah ini.
+                    </p>
+                </div>
+                <div class="mt-12 rounded-xl overflow-hidden shadow-2xl animate-on-scroll" style="animation-delay: 0.3s;">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15929.99394931086!2d99.09838184128526!3d3.520265749219662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30311bf3a7a35c27%3A0x8215c99450314d87!2sSialang%20Buah%2C%20Kec.%20Teluk%20Mengkudu%2C%20Kabupaten%20Serdang%20Bedagai%2C%20Sumatera%20Utara!5e0!3m2!1sid!2sid!4v1662542013363!5m2!1sid!2sid" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-lg font-bold">Desa Wisata Siallang Buah</p>
+            <p class="mt-2 text-blue-200">Dipersembahkan oleh Tim KKN UNIMED 2025</p>
+            <p class="mt-8 text-sm text-blue-300">&copy; 2025 Promosi Desa Siallang Buah. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // --- Script untuk Menu Mobile ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Menutup menu mobile jika link di klik
+            const mobileLinks = document.querySelectorAll('#mobile-menu a, .flex-shrink-0 a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    const targetId = link.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                         if (!mobileMenu.classList.contains('hidden')) {
+                            mobileMenu.classList.add('hidden');
+                        }
+                    }
+                });
+            });
+
+            // --- Script untuk Animasi Saat Scroll ---
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+            elementsToAnimate.forEach(el => {
+                observer.observe(el);
+            });
+            
+            // --- Script untuk Smooth Scroll ---
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
